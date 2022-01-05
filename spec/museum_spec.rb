@@ -80,6 +80,19 @@ RSpec.describe Museum do
 
       expect(@dmns.patrons).to eq([@patron_1, @patron_2, @patron_3])
     end
+
+    it '#patrons_by_exhibit_interest' do
+      @dmns.admit(@patron_1)
+      @dmns.admit(@patron_2)
+      @dmns.admit(@patron_3)
+
+      expected = {
+        @gems_and_minerals => [@patron_1],
+        @dead_sea_scrolls => [@patron_1, @patron_2, @patron_3],
+        @imax => [],
+      }
+      expect(@dmns.patrons_by_exhibit_interest).to eq(expected)
+    end
   end
 
 end

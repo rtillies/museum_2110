@@ -62,7 +62,9 @@ RSpec.describe Museum do
       # @patron_2 = Patron.new("Sally", 20)
     end
 
-    
+    it 'no patrons by default' do
+      expect(@dmns.patrons).to eq([])
+    end
   end
 
 end

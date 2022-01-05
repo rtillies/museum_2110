@@ -5,10 +5,10 @@ RSpec.describe Patron do
   before :each do
   end
 
-  it 'exists' do
+  xit 'exists' do
   end
 
-  it 'has attributes' do
+  xit 'has attributes' do
 
   end
 end

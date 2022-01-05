@@ -111,5 +111,4 @@ RSpec.describe Museum do
       expect(@dmns.draw_lottery_winner(@gems_and_minerals)).to be(nil)
     end
   end
-
 end
